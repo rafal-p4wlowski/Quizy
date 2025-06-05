@@ -1,0 +1,238 @@
+{
+  "title": "Quiz Aplikacje WWW",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Do frameworków narzędziowych zalicza się:",
+      "options": ["Entity Framework", "MVC Framework", "Razor Pages", "Blazor"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 2,
+      "question": "Mechanizm udostępniania kodu, który definiuje sposób tworzenia, hostowania i obsługi pakietów dla platformy .NET to:",
+      "options": ["Auto Mapper", "Entity Framework", "NuGet", "xUnit"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 3,
+      "question": "W podejściu EF Code First nazwa pola klucza głównego klasy \"Player\" zgodna z konwencją nie może mieć nazwy:",
+      "options": ["Id", "IdPlayer", "PlayerId", "Brak poprawnej odpowiedzi"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 4,
+      "question": "Technika ładowania danych powiązanych w jednym zapytaniu to:",
+      "options": ["Eager loading", "Lazy loading", "Explicit loading", "Full loading"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 5,
+      "question": "Jaka funkcja Fluent API odpowiada za ustawienie dokładności zmiennej typu decimal?",
+      "options": ["MaxLength", "Length", "Precision", "HasPrecision"],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 6,
+      "question": "W dziedziczeniu w myśl podejścia TPH (Table Per Hierarchy):",
+      "options": [
+        "Kolumna \"Discriminator\" tworzona jest zawsze jawnie",
+        "Każdy typ jest reprezentowany w osobnej tabeli",
+        "Reprezentacja danych w bazie jest taka sama jak w podejściu TPT",
+        "Brak poprawnej odpowiedzi"
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 7,
+      "question": "W relacji wymaganej, dla \"Delete behaviour\" o wartości \"Cascade\", usunięciu instancji typu rodzica powoduje:",
+      "options": [
+        "Zawsze usunięciu instancji dziecka",
+        "Usunięciu instancji dziecka, gdy nie została ona załadowana do instancji rodzica",
+        "Usunięciu instancji dziecka, gdy została ona załadowana do instancji rodzica",
+        "Zwrócenie błędu"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 8,
+      "question": "Proszę wskazać nieprawdziwe zdanie:",
+      "options": [
+        "Na poziomie interfejsu użytkownika kontroler jest abstrakcją",
+        "Kontroler służy do definiowania i grupowania zestawu akcji",
+        "Akcja kontrolera może pobierać pewne dane modelu",
+        "Prywatne metody kontrolera są akcjami"
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 9,
+      "question": "Metoda Ok() wywołana w kontrolerze zwróci kod statusu:",
+      "options": ["200", "400", "404", "500"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 10,
+      "question": "Proces View Discovery:",
+      "options": [
+        "Jest wywoływany w każdej akcji kontrolera",
+        "Polega na odnalezieniu modelu powiązanego z widokiem",
+        "Ma miejsce gdy akcja zwraca widok.",
+        "Zwraca widok związany z nazwą modelu."
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 11,
+      "question": "Wskaż wyrażenie jawne silnika Razor:",
+      "options": ["<p>@Hello</p>", "<p>@(Hello)</p>", "<p>@@Hello</p>", "Brak poprawnej odpowiedzi"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 12,
+      "question": "Aby nie mapować danego pola za pomocą AutoMappera, należy wywołać metodę konfiguracyjną:",
+      "options": ["NotRequired()", "NotMapped()", "Ignore()", "Cancel()"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 13,
+      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap<A,B>(), A stanowi:",
+      "options": ["Typ źródłowy", "Typ docelowy", "ViewModel", "DataModel"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 14,
+      "question": "Dyrektywa Razor, która jest używana przez MVC aby umożliwić widokom renderowanie różnych zawartości w różnych częściach strony, to:",
+      "options": ["@section", "@render", "@content", "@area"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 15,
+      "question": "Kod, który musi zostać uruchomiony przed każdym widokiem, powinien zostać umieszony w pliku:",
+      "options": ["_ViewImports", "_ViewStart", "_Layout", "_Imports"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 16,
+      "question": "Jakie muszą być funkcje w kontrolerach? (Zakładając, że chodzi o metody akcji)",
+      "options": ["Publiczne", "Wirtualne", "Statyczne", "Prywatne"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 17,
+      "question": "Wskaż niepoprawne zdanie dotyczące architektury SOA (Service Oriented Architecture):",
+      "options": [
+        "Architektura SOA skupia się na tworzeniu autonomicznych usług.",
+        "Usługa powinna zależeć od innych usług.",
+        "Usługa powinna być zbudowana w oparciu o interfejs.",
+        "Wszystkie zdania są poprawne."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 18,
+      "question": "Co zawiera widok? (Wybierz wszystkie prawidłowe opcje)",
+      "options": [
+        "Razor Syntax - Łączenie C# i HTML",
+        "Częściowe Widoki (Partial Views) - Wielokrotnego użytku komponenty",
+        "Kompilator Javy",
+        "Baza danych wbudowana w widok",
+        "Formularze i Elementy Interaktywne - Formularze, przyciski, itp.",
+        "HTML Markup - Struktura strony",
+        "Dane Przekazywane z Kontrolera - Model, ViewBag, ViewData, TempData",
+        "Layout Views - Wspólne struktury dla wielu widoków",
+        "Elementy C# i Razor - Pętle, warunki, wyrażenia",
+        "Dyrektywy Razor - @model, @using, @section",
+        "Bezpośredni dostęp do BIOS",
+        "Skrypty JavaScript i Style CSS - Skrypty i style"
+      ],
+      "correctAnswers": [0, 1, 4, 5, 6, 7, 8, 9, 11],
+      "type": "multiple"
+    },
+    {
+      "id": 19,
+      "question": "Operator, który zawiesza wykonanie metody asynchronicznej to:",
+      "options": ["pause", "delay", "async", "await"],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 20,
+      "question": "Wskaż niepoprawną odpowiedź dla TPH (Table Per Hierarchy):",
+      "options": [
+        "Jest bardziej wydajny od TPT",
+        "Zawiera kolumnę dyskryminującą",
+        "Działa tak samo jak TPT",
+        "Używa jednego typu tabeli"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 21,
+      "question": "Wskaż niepoprawne dokończenie zdania. W relacyjnych bazach danych (...):",
+      "options": [
+        "(...) Każda tabela składa się z wierszy lub kolumn",
+        "(...) Tabela składa się z rekordów i kolumn",
+        "(...) Relacje są definiowane przez klucze obce",
+        "(...) Każdy wiersz w tabeli jest unikalny"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 22,
+      "question": "We wzorcu MVC widok:",
+      "options": [
+        "obsługuje interakcje z użytkownikiem.",
+        "Dokonuje zmian na poziomie modelu.",
+        "Stanowi tylko kod HTML.",
+        "Może być przechowywany w katalogu \"Controllers\"."
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 23,
+      "question": "Wskaż niepoprawne zdanie:",
+      "options": [
+        "ViewModel to model przekazywany z kontrolera do widoku.",
+        "W przypadku słabego typowania widoków poprawność typów modelu używanych w widoku jest sprawdzana w czasie kompilacji.",
+        "Nie ma żadnych ograniczeń co do typów ViewModeli.",
+        "Obiekt ViewData jest kolekcją słownikową."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 24,
+      "question": "Wskaż wyrażenie niejawne silnika Razor:",
+      "options": ["<p>@obj.id</p>", "<p>@(obj.id)</p>", "<p>@@obj.id</p>", "<p>@{obj.id}</p>"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 25,
+      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap<A,B>(), B stanowi:",
+      "options": ["Typ źródłowy", "Typ docelowy", "ViewModel", "DataModel"],
+      "correctAnswer": 1,
+      "type": "single"
+    }
+  ]
+}

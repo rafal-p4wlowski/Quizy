@@ -1,0 +1,916 @@
+{
+  "title": "Quiz Aplikacje WWW",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Do frameworków narzędziowych zalicza się:",
+      "options": ["Entity Framework", "MVC Framework", "Razor Pages", "Blazor"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 2,
+      "question": "Mechanizm udostępniania kodu, który definiuje sposób tworzenia, hostowania i obsługi pakietów dla platformy .NET to:",
+      "options": ["Auto Mapper", "Entity Framework", "NuGet", "xUnit"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 3,
+      "question": "W podejściu EF Code First nazwa pola klucza głównego klasy \"Player\" zgodna z konwencją nie może mieć nazwy:",
+      "options": ["Id", "IdPlayer", "PlayerId", "Brak poprawnej odpowiedzi"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 4,
+      "question": "Technika ładowania danych powiązanych w jednym zapytaniu to:",
+      "options": ["Eager loading", "Lazy loading", "Explicit loading", "Full loading"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 5,
+      "question": "Jaka funkcja Fluent API odpowiada za ustawienie dokładności zmiennej typu decimal?",
+      "options": ["MaxLength", "Length", "Precision", "HasPrecision"],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 6,
+      "question": "W dziedziczeniu w myśl podejścia TPH (Table Per Hierarchy):",
+      "options": [
+        "Kolumna \"Discriminator\" tworzona jest zawsze jawnie",
+        "Każdy typ jest reprezentowany w osobnej tabeli",
+        "Reprezentacja danych w bazie jest taka sama jak w podejściu TPT",
+        "Brak poprawnej odpowiedzi"
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 7,
+      "question": "W relacji wymaganej, dla \"Delete behaviour\" o wartości \"Cascade\", usunięciu instancji typu rodzica powoduje:",
+      "options": [
+        "Zawsze usunięciu instancji dziecka",
+        "Usunięciu instancji dziecka, gdy nie została ona załadowana do instancji rodzica",
+        "Usunięciu instancji dziecka, gdy została ona załadowana do instancji rodzica",
+        "Zwrócenie błędu"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 8,
+      "question": "Proszę wskazać nieprawdziwe zdanie:",
+      "options": [
+        "Na poziomie interfejsu użytkownika kontroler jest abstrakcją",
+        "Kontroler służy do definiowania i grupowania zestawu akcji",
+        "Akcja kontrolera może pobierać pewne dane modelu",
+        "Prywatne metody kontrolera są akcjami"
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 9,
+      "question": "Metoda Ok() wywołana w kontrolerze zwróci kod statusu:",
+      "options": ["200", "400", "404", "500"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 10,
+      "question": "Proces View Discovery:",
+      "options": [
+        "Jest wywoływany w każdej akcji kontrolera",
+        "Polega na odnalezieniu modelu powiązanego z widokiem",
+        "Ma miejsce gdy akcja zwraca widok.",
+        "Zwraca widok związany z nazwą modelu."
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 11,
+      "question": "Wskaż wyrażenie jawne silnika Razor:",
+      "options": ["<p>@Hello</p>", "<p>@(Hello)</p>", "<p>@@Hello</p>", "Brak poprawnej odpowiedzi"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 12,
+      "question": "Aby nie mapować danego pola za pomocą AutoMappera, należy wywołać metodę konfiguracyjną:",
+      "options": ["NotRequired()", "NotMapped()", "Ignore()", "Cancel()"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 13,
+      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap<A,B>(), A stanowi:",
+      "options": ["Typ źródłowy", "Typ docelowy", "ViewModel", "DataModel"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 14,
+      "question": "Dyrektywa Razor, która jest używana przez MVC aby umożliwić widokom renderowanie różnych zawartości w różnych częściach strony, to:",
+      "options": ["@section", "@render", "@content", "@area"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 15,
+      "question": "Kod, który musi zostać uruchomiony przed każdym widokiem, powinien zostać umieszony w pliku:",
+      "options": ["_ViewImports", "_ViewStart", "_Layout", "_Imports"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 16,
+      "question": "Jakie muszą być funkcje w kontrolerach? (Zakładając, że chodzi o metody akcji)",
+      "options": ["Publiczne", "Wirtualne", "Statyczne", "Prywatne"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 17,
+      "question": "Wskaż niepoprawne zdanie dotyczące architektury SOA (Service Oriented Architecture):",
+      "options": [
+        "Architektura SOA skupia się na tworzeniu autonomicznych usług.",
+        "Usługa powinna zależeć od innych usług.",
+        "Usługa powinna być zbudowana w oparciu o interfejs.",
+        "Wszystkie zdania są poprawne."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 18,
+      "question": "Co zawiera widok? (Wybierz wszystkie prawidłowe opcje)",
+      "options": [
+        "Razor Syntax - Łączenie C# i HTML",
+        "Częściowe Widoki (Partial Views) - Wielokrotnego użytku komponenty",
+        "Kompilator Javy",
+        "Baza danych wbudowana w widok",
+        "Formularze i Elementy Interaktywne - Formularze, przyciski, itp.",
+        "HTML Markup - Struktura strony",
+        "Dane Przekazywane z Kontrolera - Model, ViewBag, ViewData, TempData",
+        "Layout Views - Wspólne struktury dla wielu widoków",
+        "Elementy C# i Razor - Pętle, warunki, wyrażenia",
+        "Dyrektywy Razor - @model, @using, @section",
+        "Bezpośredni dostęp do BIOS",
+        "Skrypty JavaScript i Style CSS - Skrypty i style"
+      ],
+      "correctAnswers": [0, 1, 4, 5, 6, 7, 8, 9, 11],
+      "type": "multiple"
+    },
+    {
+      "id": 19,
+      "question": "Operator, który zawiesza wykonanie metody asynchronicznej to:",
+      "options": ["pause", "delay", "async", "await"],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 20,
+      "question": "Wskaż niepoprawną odpowiedź dla TPH (Table Per Hierarchy):",
+      "options": [
+        "Jest bardziej wydajny od TPT",
+        "Zawiera kolumnę dyskryminującą",
+        "Działa tak samo jak TPT",
+        "Używa jednego typu tabeli"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 21,
+      "question": "Wskaż niepoprawne dokończenie zdania. W relacyjnych bazach danych (...):",
+      "options": [
+        "(...) Każda tabela składa się z wierszy lub kolumn",
+        "(...) Tabela składa się z rekordów i kolumn",
+        "(...) Relacje są definiowane przez klucze obce",
+        "(...) Każdy wiersz w tabeli jest unikalny"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 22,
+      "question": "We wzorcu MVC widok:",
+      "options": [
+        "obsługuje interakcje z użytkownikiem.",
+        "Dokonuje zmian na poziomie modelu.",
+        "Stanowi tylko kod HTML.",
+        "Może być przechowywany w katalogu \"Controllers\"."
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 23,
+      "question": "Wskaż niepoprawne zdanie:",
+      "options": [
+        "ViewModel to model przekazywany z kontrolera do widoku.",
+        "W przypadku słabego typowania widoków poprawność typów modelu używanych w widoku jest sprawdzana w czasie kompilacji.",
+        "Nie ma żadnych ograniczeń co do typów ViewModeli.",
+        "Obiekt ViewData jest kolekcją słownikową."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 24,
+      "question": "Wskaż wyrażenie niejawne silnika Razor:",
+      "options": ["<p>@obj.id</p>", "<p>@(obj.id)</p>", "<p>@@obj.id</p>", "<p>@{obj.id}</p>"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 25,
+      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap<A,B>(), B stanowi:",
+      "options": ["Typ źródłowy", "Typ docelowy", "ViewModel", "DataModel"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 26,
+      "question": "Co się stanie, kiedy usuwamy rekord z bazy, a parametr ondelete jest ustawiony na cascade?",
+      "options": ["Zawsze usunie dziecko", "Zostanie zgłoszony wyjątek", "Nic się nie stanie"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 27,
+      "question": "Jaki jest cel istnienia mechanizmu migracji w EF?",
+      "options": [
+        "Zapisują poszczególne wersje schematu bazy danych",
+        "Aktualizują bazę danych na nowy stan",
+        "Cofają migrację do poprzedniego stanu"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 28,
+      "question": "Co robi metoda `Update-Database`?",
+      "options": [
+        "Aktualizuje bazę danych na nowy stan",
+        "Dodaje nową migrację",
+        "Cofa migrację do poprzedniego stanu"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 29,
+      "question": "Czym jest ViewModel?",
+      "options": [
+        "Klasą odpowiadającą za agregację i dostarczanie danych między modelem a widokiem",
+        "Klasą określającą właściwości, używaną do zapisu lub modyfikacji danych",
+        "Frameworkiem do uwierzytelniania"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 30,
+      "question": "Do czego wykorzystywany jest obiekt XMLHttpRequest w technice AJAX?",
+      "options": ["Do asynchronicznej interakcji", "Do walidacji danych", "Do stylowania strony"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 31,
+      "question": "Wskaż stwierdzenie prawdziwe dotyczące atrybutów walidacyjnych:",
+      "options": [
+        "Wyłączenie obsługi JavaScript blokuje walidację",
+        "Atrybuty walidacyjne można dowiązywać tylko do pól klas POCO",
+        "Atrybuty walidacyjne można dowiązywać do pól klas POCO oraz całych klas"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 32,
+      "question": "W jakim przypadku asynchroniczność w aplikacji internetowej jest szczególnie wskazana?",
+      "options": [
+        "Odczycie danych z usługi sieciowej i ich prezentacji na wykresie",
+        "Przekierowaniu działania aplikacji pod nowy adres",
+        "Wyświetleniu widoku prezentującego rozbudowaną politykę prywatności"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 33,
+      "question": "Po wpisaniu adresu `mojaaplikacja.pl` w przeglądarce mam pewność, że:",
+      "options": [
+        "Łączę się z aplikacją hostowaną na komputerze lokalnym, ale nie w sieci internet",
+        "Łączę się z aplikacją hostowaną w sieci internet, ale nie na komputerze lokalnym",
+        "Łączę się z aplikacją hostowaną w sieci internet lub na komputerze lokalnym"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 34,
+      "question": "Użycie atrybutu [NotMapped] dla pola klasy modelu powoduje:",
+      "options": [
+        "Jego nieodwzorowanie w bazie danych",
+        "Odwzorowanie pola typu wyliczeniowego w bazie danych",
+        "Utworzenie pola typu wyliczeniowego"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 35,
+      "question": "Czym jest wczytywanie zachłanne (eager loading)?",
+      "options": [
+        "Procesem, w którym zapytania do tabeli nadrzędnej pobierają także dane z tabeli podrzędnej",
+        "Wczytywaniem danych w momencie pierwszego użycia",
+        "Jawnym wczytywaniem powiązanych danych"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 36,
+      "question": "Do czego służy mechanizm ciasteczek?",
+      "options": [
+        "Do zarządzania stanem aplikacji poprzez przesłanie identyfikatora od serwera do przeglądarki",
+        "Do przesyłania danych (np. nazwiska, imienia) od serwera do przeglądarki",
+        "Do identyfikacji użytkownika w systemie"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 37,
+      "question": "Co jest celem kontrolera we wzorcu MVC?",
+      "options": [
+        "Kontrolowanie danych umieszczonych w bazie danych",
+        "Wpływanie na wygląd widoków",
+        "Tworzenie widoków i przekazywanie ich użytkownikowi"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 38,
+      "question": "Czym jest identyfikacja w systemie?",
+      "options": ["Procesem rejestracji w systemie", "Procesem uwierzytelniania", "Procesem autoryzacji"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 39,
+      "question": "Do czego są przeznaczone migracje w Visual Studio?",
+      "options": ["Realizacji operacji CRUD w ORM", "Generowania struktury bazy danych", "Zestawienia połączenia z serwerem baz danych"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 40,
+      "question": "Jaki jest identyfikator sesji?",
+      "options": ["Różny dla używanych przez użytkownika przeglądarek", "Jednakowy dla używanych przez użytkownika przeglądarek"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 41,
+      "question": "Czym jest Front-end w aplikacji internetowej?",
+      "options": ["Interfejsem użytkownika", "Logiką aplikacji", "Bazą danych"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 42,
+      "question": "Jaka relacja zachodzi między tabelami Lot i Pasażer, jeśli jeden lot może mieć wielu pasażerów?",
+      "options": ["Jeden do jednego", "Jeden do wielu", "Wiele do wielu"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 43,
+      "question": "Czym jest uwierzytelnienie?",
+      "options": ["Powiązaniem tożsamości elektronicznej z osobą fizyczną", "Procesem identyfikacji", "Procesem autoryzacji"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 44,
+      "question": "Do czego służy podejście code-first?",
+      "options": [
+        "Do ręcznego tworzenia kodu aplikacji i ręcznego tworzenia kodu SQL",
+        "Do wygenerowania kodu aplikacji na podstawie kodu wygenerowanego w serwerze baz danych",
+        "Do wygenerowania obiektów w bazie danych na podstawie klas modelu"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 45,
+      "question": "Jaka jest cecha internetowych stron statycznych?",
+      "options": [
+        "Brak interaktywności",
+        "Konieczność wzmożonej interakcji z użytkownikiem",
+        "Możliwość dostosowania wyglądu do preferencji każdego z użytkowników"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 46,
+      "question": "Jaka jest główna zaleta systemów CMS?",
+      "options": [
+        "Możliwość prezentacji treści bez konieczności programowania",
+        "Możliwość domowego hostingu",
+        "Możliwość prezentacji zawartości bazy danych bez mapowania OR"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 47,
+      "question": "Z czym współpracuje helper asp-label-for?",
+      "options": ["Z dowolnym atrybutem klasy POCO", "Z atrybutem Display", "Z atrybutem Required"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 48,
+      "question": "Co można ustalić z adresu http://kuptaniobilet.pl/bilety?",
+      "options": [
+        "Aplikacji, nazwę kontrolera i nazwę akcji",
+        "Aplikacji i nazwę kontrolera, a nie nazwę akcji",
+        "Aplikacji i akcji, a nie kontrolera"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 49,
+      "question": "Przed jakim typowym zagrożeniem chroni użycie SSL?",
+      "options": ["MITM", "DoS", "XSS"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 50,
+      "question": "Wskaż nieprawdziwe stwierdzenie dotyczące silnika Razor w tworzeniu widoków.",
+      "options": [
+        "Eliminuje konieczność kodu HTML",
+        "Oferuje możliwość dziedziczenia",
+        "Oferuje możliwość użycia instrukcji iteracyjnych i warunkowych"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 51,
+      "question": "Czym jest procedura składowana?",
+      "options": ["Procedurą tworzoną w aplikacji", "Procedurą tworzoną w bazie danych", "Procedurą tworzoną w bazie danych lub aplikacji"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 52,
+      "question": "Co zakłada transakcja?",
+      "options": [
+        "Wykonanie dokładnie 2. instrukcji: dodania i usunięcia rekordu",
+        "Wykonanie co najmniej 1. instrukcji wg kolejności podanej w kodzie",
+        "Wykonanie wszystkich instrukcji lub żadnej"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 53,
+      "question": "Czym jest autoryzacja?",
+      "options": ["Przyznaniem dostępu do zasobów w systemie", "Identyfikacją", "Uwierzytelnieniem"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 54,
+      "question": "Jaki jest cel ORM?",
+      "options": [
+        "Generowanie kodu kontrolera i widoków",
+        "Mapowanie obiektów z bazy danych obiektami po stronie aplikacji",
+        "Generowanie kodu modeli"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 55,
+      "question": "Czym jest logika aplikacji?",
+      "options": ["Elementem wyróżniającym aplikację desktopową", "Front-end", "Back-end"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 56,
+      "question": "Jaką nazwę nosi menadżer pakietów w VS?",
+      "options": ["Eloquent", "Npm", "Nuget"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 57,
+      "question": "Indeks w tabeli bazy danych, który strukturą przypomina książkę telefoniczną to:",
+      "options": ["Klastrowy", "Strukturalny", "Nieklasyczny"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 58,
+      "question": "Czy FluentAPI w ASP.NET jest niezbędne do zapewnienia obsługi relacji między tabelami?",
+      "options": ["Fałsz", "Prawda"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 59,
+      "question": "Jakie powinno być działanie kontrolera Home wyświetlającego tekst polityki RODO?",
+      "options": ["Asynchroniczna", "Synchroniczna"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 60,
+      "question": "Jakie działanie powoduje użycie .Include w EF?",
+      "options": ["Left join", "Right join", "Inner join"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 61,
+      "question": "Kiedy tworzony jest obiekt HttpRequest?",
+      "options": [
+        "Z chwilą nadejścia pierwszego żądania do aplikacji i utrzymywany w pamięci przez cały czas jej działania na serwerze",
+        "Na czas sesji z aplikacją",
+        "Na krótki czas przetwarzania żądania, a następnie niszczony"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 62,
+      "question": "Co powoduje zastosowanie dziedziczenia w klasach modelu danych w podejściu TPH (Table Per Hierarchy)?",
+      "options": [
+        "Utworzeniem wspólnej tabeli dla wszystkich klas modelu",
+        "Utworzeniem dla każdej klasy osobnej tabeli niepowiązanej przez PK-FK",
+        "Utworzeniem dla każdej klasy osobnej tabeli powiązanych przez PK-FK"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 63,
+      "question": "Co oznacza użycie AsNoTracking w EFC?",
+      "options": [
+        "Wzrost wydajności przetwarzania danych tylko do zapisu",
+        "Spadek wydajności związany z koniecznością ręcznego monitorowania stanu obiektu",
+        "Wzrost wydajności przetwarzania danych tylko do odczytu"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 64,
+      "question": "Co nie jest celem wstrzykiwania zależności?",
+      "options": [
+        "Redukcja liczby żądań przetwarzanych przez aplikację",
+        "Redukcja połączeń pomiędzy klasami",
+        "Usunięcie powiązania klasy nadrzędnej z podrzędną poza tę nadrzędną"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 65,
+      "question": "Jakie jest główne założenie mechanizmu odwrócenia sterowania (IoC)?",
+      "options": [
+        "Uzależnienie klas (modułów) wyższego poziomu od modułów niższego poziom, nie zaś pewnych abstrakcji",
+        "Uzależnienie abstrakcji dla klas (modułów) wyższego i niższego poziomu",
+        "Uniezależnienie klas (modułów) wyższego poziomu od modułów niższego poziomu"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 66,
+      "question": "W śledzeniu zmian migawkowych, jaka jest kolejność działań przy dodawaniu rekordu?",
+      "options": [
+        "SaveChanges(), zmiana w bazie danych, dodanie rekordu",
+        "Dodanie rekordu, SaveChanges(), zmiana w bazie danych",
+        "Dodanie rekordu, zmiana w bazie danych, SaveChanges()"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 67,
+      "question": "Mając podany schemat routingu: {controller=Home}/{action=Index}/{id?}, co oznacza znak '?'?",
+      "options": ["parametr id jest opcjonalny", "parametr id jest wymagany", "wymagana jest akcja kontrolera"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 68,
+      "question": "Co powoduje modyfikator dostępu internal?",
+      "options": [
+        "składowe nim oznaczone są dostępne w ramach tego samego zestawu",
+        "składowe są dostępne tylko w obrębie klasy",
+        "składowe są dostępne w klasach dziedziczących"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 69,
+      "question": "Jakiego typu obiekt można wykorzystać, chcąc przekazać dane z kontrolera do widoku?",
+      "options": ["ViewData", "Model", "Session"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 70,
+      "question": "Jakie jest zadanie kontrolerów w modelu MVC?",
+      "options": [
+        "odebranie danych od widoku, walidacja oraz przekazanie danych do modelu",
+        "renderowanie widoku",
+        "zarządzanie logiką biznesową"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 71,
+      "question": "Za pomocą jakich żądań można przekazywać parametry do metod kontrolera?",
+      "options": ["GET", "POST", "GET lub POST"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 72,
+      "question": "Co można powiedzieć o parametrze generycznym, jeśli typy będące argumentami parametru będą wymagały konstruktora domyślnego?",
+      "options": [
+        "Parametr generyczny ma ograniczenie `new()`",
+        "Parametr generyczny musi być klasą",
+        "Parametr generyczny musi być strukturą"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 73,
+      "question": "Co umożliwia operator typeof?",
+      "options": [
+        "pobranie informacji o typie w czasie kompilacji programu",
+        "pobranie informacji o typie w czasie wykonania programu",
+        "utworzenie instancji typu"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 74,
+      "question": "Z czym tożsamy jest kod: 'int? a = 100;'?",
+      "options": ["'Nullable<int> a = 100;'", "'int a = 100;'", "'object a = 100;'"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 75,
+      "question": "Jakiego typu współpracy z danymi nie umożliwia Entity Framework?",
+      "options": ["View First", "Code First", "Database First"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 76,
+      "question": "Co powoduje modyfikator dostępu protected internal?",
+      "options": [
+        "składowe nim oznaczone są dostępne w ramach tego samego zestawu .NET lub w klasach pochodnych",
+        "składowe są dostępne tylko w ramach tego samego zestawu .NET",
+        "składowe są dostępne tylko w klasach pochodnych"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 77,
+      "question": "Jakie polecenie pozwala na uruchomienie nowego wątku w języku C#?",
+      "options": ["async", "await", "Task.Run"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 78,
+      "question": "Jaki Data Annotation odpowiada za ustawienie pola jako nieprzyjmującego wartości NULL?",
+      "options": ["Required", "NotNull", "Value"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 79,
+      "question": "Na jakich systemach operacyjnych mogą być hostowane aplikacje ASP.NET Core?",
+      "options": ["Tylko Windows", "Windows i Linux", "Mac Os, Windows, Linux"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 80,
+      "question": "Wskaż niepoprawne zdanie dotyczące kontrolera i modelu.",
+      "options": [
+        "Kontroler może łączyć się z modelem w celu pobrania danych.",
+        "Model występuje zwykle w formie zestawu klas realizujących mapowanie relacyjno-obiektowe.",
+        "Kontroler prezentuje dane użytkownikowi."
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 81,
+      "question": "Do czego wykorzystywany jest mechanizm sesji?",
+      "options": ["Prezentacji danych.", "Walidacji.", "Utrzymywania stanu aplikacji pomiędzy zapytaniami."],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 82,
+      "question": "Sprawdzenie poprawności stanu modelu w kontrolerze odbywa się za pomocą odwołania do właściwości:",
+      "options": ["ModelState.IsValid", "Model.IsValid", "Model.IsValidState", "ModelState.IsTrue"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 83,
+      "question": "Na co pozwala ASP.NET Identity Core?",
+      "options": [
+        "stworzenie bazy danych.",
+        "autentykację oraz autoryzację użytkowników.",
+        "mapowanie obiektowo relacyjne."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 84,
+      "question": "Wskaż niepoprawne dokończenie zdania. Klasa DbContext...:",
+      "options": [
+        "...zajmuje się odczytem danych z bazy danych.",
+        "...jest składową obiektów typu DbSet.",
+        "...tłumaczy dane relacyjne na obiektowe.",
+        "...zapisuje dane do bazy."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 85,
+      "question": "Która z poniższych warstw odpowiada za dostęp do danych?",
+      "options": ["Service Layer", "Presentation Layer", "Business Logic Layer (BLL)", "Data Access Layer (DAL)"],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 86,
+      "question": "Gdzie domyślnie znajduje się reguła routingu aplikacji ASP.NET Core?",
+      "options": ["Startup.cs", "Program.cs", "appsettings.json", "bundleconfig.json"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 87,
+      "question": "Co oznacza atrybut [HttpPost]?",
+      "options": [
+        "że zostanie sprawdzony token uniemożliwiający przechwycenie sesji.",
+        "że zostanie przeprowadzona walidacja.",
+        "że akcja musi zostać wywołana jako metoda Post protokołu HTTP."
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 88,
+      "question": "Co się wydarzy po wykonaniu instrukcji `Mapper.Map<PostVm>(post)`, zakładając, że nie została zdefiniowana mapa dla typu Post do typu PostVm?",
+      "options": [
+        "Podmieni typ PostVm na jego typ bazowy.",
+        "Zostanie zgłoszony wyjątek o braku mapy.",
+        "Nie wykona mapowania i zwróci obiekt typu Post.",
+        "Instrukcja wykona się poprawnie, gdyż AutoMapper automatycznie dopisze tę mapę."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 89,
+      "question": "Do czego służy fragment kodu `services.AddScoped<IUnitOfWork, UnitOfWork>()`?",
+      "options": [
+        "powiązania interfejsu z klasą w kontenerze DI, gdzie obiekt będzie tworzony za każdym żądaniem.",
+        "mapowania serwisu na interfejs.",
+        "mapowania encji na view-model.",
+        "powiązania interfejsu z klasą w kontenerze DI, gdzie obiekt będzie tworzony tylko raz."
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 90,
+      "question": "Co znajduje się w zmiennej `z` po wykonaniu kodu `z = Context.User.Identity.Name;`?",
+      "options": [
+        "referencja do obiektu typu string zawierającego nazwę obecnie zalogowanego użytkownika",
+        "referencja do obiektu typu string zawierającego id obecnie zalogowanego użytkownika",
+        "referencja do obiektu typu IPrincipal zawierającego obiekt użytkownika."
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 91,
+      "question": "Jakie właściwości ma pole oznaczone modyfikatorem `readonly`?",
+      "options": [
+        "może być zmodyfikowane tylko z poziomu mutatora.",
+        "jest niewidoczne poza klasą.",
+        "jest stałą.",
+        "może być ustawione tylko w konstruktorze."
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 92,
+      "question": "Według konwencji, od jakiego znaku powinna zaczynać się nazwa widoku częściowego?",
+      "options": ["_", "*", ".", "+"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 93,
+      "question": "Jaki format mają kody statusu HTTP informujące o błędzie po stronie klienta?",
+      "options": ["4xx", "1xx", "2xx", "3xx"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 94,
+      "question": "Do czego służy generyczny parametr (int) w kodzie: `public class Role : IdentityRole<int>`?",
+      "options": [
+        "Definiuje klucz obcy",
+        "Ustanawia typ klasy bazowej dla klasy Roles",
+        "Określa typ klucza głównego tabeli AspNetRoles"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 95,
+      "question": "Jakie polecenie uaktualnia schemat bazy danych?",
+      "options": ["Script-Migration", "Add-Migration", "Update-Database", "Remove-Migration"],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 96,
+      "question": "Kiedy instrukcja `ModelState.IsValid` zwróci wartość `true`?",
+      "options": [
+        "Użytkownik nie istnieje.",
+        "Walidacja wszystkich atrybutów modelu przebiegła pomyślnie.",
+        "Sesja wygasła.",
+        "Gdy zmienił się stan aplikacji."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 97,
+      "question": "Co umożliwia słowo kluczowe `virtual` nadane na właściwość w Entity Framework?",
+      "options": [
+        "rozszerzenie właściwości w klasie pochodnej.",
+        "zmodyfikowanie właściwości",
+        "nadpisanie właściwości",
+        "włączenie lazy loading dla tej właściwości."
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 98,
+      "question": "Co umożliwia metoda `OnModelCreating` w klasie `DbContext`?",
+      "options": [
+        "zbudowanie modelu.",
+        "rozszerzenie klasy DbContext.",
+        "korzystanie z DataAnnotations.",
+        "korzystanie z fluent API."
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    }
+  ]
+}

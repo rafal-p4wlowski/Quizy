@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Hub - .NET Framework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #2A2A2A;
+            min-height: 100vh;
+            padding: 20px;
+            color: #F0F0F0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #3A3A3A;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+            border: 2px solid #222222;
+        }
+
+        .header {
+            background: #222222;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #FF4040;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1em;
+            opacity: 0.7;
+            color: #FF4040;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 40px;
+            background: #3A3A3A;
+        }
+
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .quiz-card {
+            background: #4A4A4A;
+            border: 2px solid #5A5A5A;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #F0F0F0;
+            display: block;
+        }
+
+        .quiz-card:hover {
+            border-color: #FF4040;
+            box-shadow: 0 10px 25px rgba(255, 64, 64, 0.3);
+            transform: translateY(-5px);
+            color: #F0F0F0;
+        }
+
+        .quiz-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #FF4040;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quiz-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .quiz-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #5A5A5A;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .quiz-icon {
+            width: 30px;
+            height: 30px;
+            background: #FF4040;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .features {
+            margin-top: 40px;
+            padding: 30px;
+            background: #4A4A4A;
+            border-radius: 15px;
+            border: 2px solid #5A5A5A;
+        }
+
+        .features h2 {
+            color: #FF4040;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.8em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #3A3A3A;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #5A5A5A;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #FF4040;
+        }
+
+        .feature-item h4 {
+            color: #F0F0F0;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 0.9em;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .info-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 64, 64, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #FF4040;
+        }
+
+        .info-section h3 {
+            color: #FF4040;
+            margin-bottom: 15px;
+        }
+
+        .info-section ul {
+            margin-left: 20px;
+        }
+
+        .info-section li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+
+            .quiz-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .quiz-card {
+                padding: 20px;
+            }
+        }
+
+        /* Selection styling for dark theme */
+        ::selection {
+            background: #FF4040;
+            color: white;
+        }
+
+        ::-moz-selection {
+            background: #FF4040;
+            color: white;
+        }
+
+        /* Scrollbar styling for dark theme */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #3A3A3A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FF4040;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF5050;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Quiz Hub</h1>
+            <p>Centrum quizów z .NET Framework i ASP.NET MVC</p>
+            <div class="subtitle">Wybierz quiz i sprawdź swoją wiedzę!</div>
+        </div>
+        
+        <div class="content">
+            <div class="quiz-grid">
+                <!-- Quiz Grafika -->
+                <a href="grafika.html" class="quiz-card">
+                    <h3>
+                        <div class="quiz-icon">🎨</div>
+                        Quiz Grafika
+                    </h3>
+                    <p>
+                        Quiz skupiony na tematyce graficznej, projektowania interfejsów użytkownika, 
+                        CSS, HTML i technologiach frontendowych. Sprawdź swoją wiedzę z zakresu 
+                        designu i stylowania stron internetowych.
+                    </p>
+                    <div class="quiz-stats">
+                        <div class="stat-item">
+                            📊 <span>Pytania: Różne</span>
+                        </div>
+                        <div class="stat-item">
+                            ⏱️ <span>Czas: Dowolny</span>
+                        </div>
+                        <div class="stat-item">
+                            🎲 <span>Losowanie</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Quiz AWWW -->
+                <a href="awww.html" class="quiz-card">
+                    <h3>
+                        <div class="quiz-icon">🌐</div>
+                        Quiz AWWW
+                    </h3>
+                    <p>
+                        Quiz z Architektury i Technologii Systemów Webowych. Sprawdź swoją wiedzę 
+                        z zakresu protokołów internetowych, architektur webowych, bezpieczeństwa 
+                        i technologii serwerowych.
+                    </p>
+                    <div class="quiz-stats">
+                        <div class="stat-item">
+                            📊 <span>Pytania: Różne</span>
+                        </div>
+                        <div class="stat-item">
+                            ⏱️ <span>Czas: Dowolny</span>
+                        </div>
+                        <div class="stat-item">
+                            🎲 <span>Losowanie</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Sekcja funkcji -->
+            <div class="features">
+                <h2>🚀 Funkcje quizów</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔀</div>
+                        <h4>Losowanie pytań</h4>
+                        <p>Pytania i odpowiedzi są losowane przy każdym odświeżeniu</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✅</div>
+                        <h4>Sprawdzanie odpowiedzi</h4>
+                        <p>Natychmiastowa weryfikacja z kolorowymi oznaczeniami</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <h4>Pasek postępu</h4>
+                        <p>Śledzenie postępu podczas rozwiązywania quizu</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h4>Responsywny design</h4>
+                        <p>Działa na komputerach, tabletach i telefonach</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Różne typy pytań</h4>
+                        <p>Jednokrotny i wielokrotny wybór odpowiedzi</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <h4>Reset i ponowne losowanie</h4>
+                        <p>Możliwość resetowania i nowego losowania pytań</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informacje dodatkowe -->
+            <div class="info-section">
+                <h3>ℹ️ Informacje o quizach</h3>
+                <ul>
+                    <li><strong>Quiz Grafika:</strong> Wczytuje dane z pliku <code>data_grafika.json</code></li>
+                    <li><strong>Quiz AWWW:</strong> Wczytuje dane z pliku <code>data_awww.json</code></li>
+                    <li>Oba quizy mają wbudowane pytania zapasowe w przypadku problemów z plikami JSON</li>
+                    <li>Wszystkie quizy wykorzystują ten sam silnik z losowaniem i sprawdzaniem odpowiedzi</li>
+                    <li>Ciemny motyw z czerwonymi akcentami dla lepszego komfortu pracy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
