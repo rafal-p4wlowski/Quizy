@@ -1,0 +1,218 @@
+{
+  "title": "Quiz Robotyka",
+  "questions": [
+    {
+      "id": 1,
+      "question": "W napędzie różnicowym robota, napęd jest:",
+      "options": [
+        "niezależny dla kół napędowych",
+        "dwa koła mają wspólną nieruchomą oś",
+        "sprzężony dla wszystkich kół"
+      ],
+      "correctAnswers": [0, 1],
+      "type": "multiple"
+    },
+    {
+      "id": 2,
+      "question": "Mapa w postaci grafu to:",
+      "options": ["mapa geometryczna", "mapa topologiczna"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 3,
+      "question": "Rozdzielczość enkodera wpływa na:",
+      "options": [
+        "dokładność pomiaru",
+        "prędkość jazdy",
+        "znajdowanie optymalnej trajektorii jazdy"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 4,
+      "question": "Stosując koła Mecanum (wielokierunkowe), możliwe jest sterowanie burtowe:",
+      "options": ["tak", "nie"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 5,
+      "question": "Kinematyka prosta manipulatora polega na:",
+      "options": [
+        "znalezieniu zmiennych przegubowych w zależności od pozycji i orientacji końcówki roboczej",
+        "określeniu pozycji i orientacji końcówki roboczej posiadając dane o zmiennych przegubowych"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 6,
+      "question": "Kinematyka odwrotna manipulatora polega na:",
+      "options": [
+        "znalezieniu zmiennych przegubowych w zależności od pozycji i orientacji końcówki roboczej",
+        "określeniu pozycji i orientacji końcówki roboczej posiadając dane o zmiennych przegubowych"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 7,
+      "question": "Kto jest twórcą praw robotyki:",
+      "options": ["David Langfort", "Mark Tilden", "Stanisław Lem", "Issac Asimov"],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 8,
+      "question": "Kinematyka jest badaniem ruchu:",
+      "options": [
+        "bez uwzględniania sił, które powodują ten ruch",
+        "z uwzględnianiem sił, które powodują ten ruch"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 9,
+      "question": "Stopień swobody to:",
+      "options": [
+        "minimalna liczba zmiennych do opisu układu",
+        "maksymalna liczba zmiennych do opisu układu"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 10,
+      "question": "Dla mobilnych robotów lądowych i pojazdów pływających (na wodzie), liczba stopni swobody wynosi:",
+      "options": ["3", "6"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 11,
+      "question": "Dla robotów powietrznych, kosmicznych i podwodnych, liczba stopni swobody jest równa:",
+      "options": ["3", "6"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 12,
+      "question": "Kinematyka prosta robota mobilnego to:",
+      "options": [
+        "dla zadanej trajektorii znalezienie odpowiednich prędkości wejściowych",
+        "dla zadanych prędkości wejściowych określenie trajektorii ruchu"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 13,
+      "question": "Kinematyka odwrotna robota mobilnego to:",
+      "options": [
+        "dla zadanej trajektorii znalezienie odpowiednich prędkości wejściowych",
+        "dla zadanych prędkości wejściowych określenie trajektorii ruchu"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 14,
+      "question": "Stopień manewrowości to:",
+      "options": [
+        "suma stopni mobilności i sterowalności",
+        "różnica liczby sterowanych wejść i stopni mobilności",
+        "zawiera zarówno stopnie swobody, które robot bezpośrednio wykorzystuje do poruszania się, jak i do sterowania torem jazdy",
+        "całkowita liczba sterowanych wejść"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 15,
+      "question": "Poniższe oznaczenie dotyczy: (rysunek koła z rolkami prostopadłymi do osi)",
+      "options": ["koła mecanum", "koła omni-directional"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 16,
+      "question": "Określ stopień manewrowości dla układu: (rysunek platformy z kołami wielokierunkowymi)",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 17,
+      "question": "Informacja o położeniu ginie po wyłączeniu zasilania w:",
+      "options": [
+        "enkoderze przyrostowym (inkrementalnym)",
+        "enkoderze absolutnym"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 18,
+      "question": "Przyczyną niedokładności odometrii dla napędu różnicowego mogą być:",
+      "options": [
+        "poślizgi kół podczas zmian prędkości",
+        "niedokładności wykonania kół",
+        "pośrednie obliczenia orientacji"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "type": "multiple"
+    },
+    {
+      "id": 19,
+      "question": "Pomiar odległości (lub kąta widzenia) od 3 lub więcej obiektów dotyczy:",
+      "options": ["nawigacji trójkierunkowej", "nawigacji triangulacyjnej"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 20,
+      "question": "Sonar jest czujnikiem akustycznym:",
+      "options": ["tak", "nie"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 21,
+      "question": "Konfiguracja robota mobilnego to:",
+      "options": [
+        "jego położenie i orientacja",
+        "liczba i rodzaj napędu",
+        "system sterowania"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 22,
+      "question": "Sprzężenie zwrotne pojawiło się od:",
+      "options": ["I generacji robotów", "II generacji robotów", "III generacji robotów"],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 23,
+      "question": "Idealne koła do odometrii powinno być:",
+      "options": ["cienkie i niesprężyste", "cienkie i sprężyste"],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 24,
+      "question": "Przestrzeń konfiguracyjna robota mobilnego to:",
+      "options": [
+        "struktura danych, która pozwala na określenie położenia i orientacji robota oraz obiektów w środowisku robota",
+        "struktura danych, która pozwala na określenie trajektorii, prędkości i przyspieszeń robota mobilnego"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    }
+  ]
+}
