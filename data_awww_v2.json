@@ -530,7 +530,7 @@
       "id": 58,
       "question": "Czy FluentAPI w ASP.NET jest niezbędne do zapewnienia obsługi relacji między tabelami?",
       "options": ["Fałsz", "Prawda"],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "type": "single"
     },
     {
@@ -544,7 +544,7 @@
       "id": 60,
       "question": "Jakie działanie powoduje użycie .Include w EF?",
       "options": ["Left join", "Right join", "Inner join"],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "type": "single"
     },
     {
@@ -653,7 +653,7 @@
       "id": 71,
       "question": "Za pomocą jakich żądań można przekazywać parametry do metod kontrolera?",
       "options": ["GET", "POST", "GET lub POST"],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "type": "single"
     },
     {
@@ -707,7 +707,7 @@
       "id": 77,
       "question": "Jakie polecenie pozwala na uruchomienie nowego wątku w języku C#?",
       "options": ["async", "await", "Task.Run"],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "type": "single"
     },
     {
