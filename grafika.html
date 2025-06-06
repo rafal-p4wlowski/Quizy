@@ -549,11 +549,21 @@
                     // For multiple choice, update all correct answer indices
                     // Handle both correctAnswers array or correctAnswer as single value or array
                     let correctAnswersArray;
-                    if (Array.isArray(question.correctAnswers)) {
+                    // Prioritize non-empty arrays. If both types of keys exist, plural takes precedence if non-empty.
+                    if (Array.isArray(question.correctAnswers) && question.correctAnswers.length > 0) {
                         correctAnswersArray = question.correctAnswers;
-                    } else if (Array.isArray(question.correctAnswer)) {
+                    } else if (Array.isArray(question.correctAnswer) && question.correctAnswer.length > 0) {
                         correctAnswersArray = question.correctAnswer;
-                    } else {
+                    } 
+                    // If we are here, neither was a non-empty array.
+                    // Now check if either is an empty array (preferring plural if both are empty arrays or one is empty and other not array)
+                    else if (Array.isArray(question.correctAnswers)) { // This means plural is []
+                        correctAnswersArray = question.correctAnswers;
+                    } else if (Array.isArray(question.correctAnswer)) { // This means singular is [] (and plural was not an array)
+                        correctAnswersArray = question.correctAnswer;
+                    }
+                    // If still undefined, check for single value in correctAnswer (singular)
+                    else {
                         correctAnswersArray = question.correctAnswer !== undefined ? [question.correctAnswer] : [];
                     }
                     
