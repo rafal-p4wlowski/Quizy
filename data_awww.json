@@ -94,7 +94,7 @@
     {
       "id": 11,
       "question": "Wskaż wyrażenie jawne silnika Razor:",
-      "options": ["<p>@Hello</p>", "<p>@(Hello)</p>", "<p>@@Hello</p>", "Brak poprawnej odpowiedzi"],
+      "options": ["&lt;p&gt;@Hello&lt;/p&gt;", "&lt;p&gt;@(Hello)&lt;/p&gt;", "&lt;p&gt;@@Hello&lt;/p&gt;", "Brak poprawnej odpowiedzi"],
       "correctAnswer": 1,
       "type": "single"
     },
@@ -223,13 +223,13 @@
     {
       "id": 24,
       "question": "Wskaż wyrażenie niejawne silnika Razor:",
-      "options": ["<p>@obj.id</p>", "<p>@(obj.id)</p>", "<p>@@obj.id</p>", "<p>@{obj.id}</p>"],
+      "options": ["&lt;p&gt;@obj.id&lt;/p&gt;", "&lt;p&gt;@(obj.id)&lt;/p&gt;", "&lt;p&gt;@@obj.id&lt;/p&gt;", "&lt;p&gt;@{obj.id}&lt;/p&gt;"],
       "correctAnswer": 0,
       "type": "single"
     },
     {
       "id": 25,
-      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap<A,B>(), B stanowi:",
+      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap&lt;A,B&gt;(), B stanowi:",
       "options": ["Typ źródłowy", "Typ docelowy", "ViewModel", "DataModel"],
       "correctAnswer": 1,
       "type": "single"

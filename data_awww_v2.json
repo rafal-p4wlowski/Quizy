@@ -94,7 +94,7 @@
     {
       "id": 11,
       "question": "Wskaż wyrażenie jawne silnika Razor:",
-      "options": ["<p>@Hello</p>", "<p>@(Hello)</p>", "<p>@@Hello</p>", "Brak poprawnej odpowiedzi"],
+      "options": ["&lt;p&gt;@Hello&lt;/p&gt;", "&lt;p&gt;@(Hello)&lt;/p&gt;", "&lt;p&gt;@@Hello&lt;/p&gt;", "Brak poprawnej odpowiedzi"],
       "correctAnswer": 1,
       "type": "single"
     },
@@ -107,7 +107,7 @@
     },
     {
       "id": 13,
-      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap<A,B>(), A stanowi:",
+      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap&lt;A,B&gt;(), A stanowi:",
       "options": ["Typ źródłowy", "Typ docelowy", "ViewModel", "DataModel"],
       "correctAnswer": 0,
       "type": "single"
@@ -223,13 +223,13 @@
     {
       "id": 24,
       "question": "Wskaż wyrażenie niejawne silnika Razor:",
-      "options": ["<p>@obj.id</p>", "<p>@(obj.id)</p>", "<p>@@obj.id</p>", "<p>@{obj.id}</p>"],
+      "options": ["&lt;p&gt;@obj.id&lt;/p&gt;", "&lt;p&gt;@(obj.id)&lt;/p&gt;", "&lt;p&gt;@@obj.id&lt;/p&gt;", "&lt;p&gt;@{obj.id}&lt;/p&gt;"],
       "correctAnswer": 0,
       "type": "single"
     },
     {
       "id": 25,
-      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap<A,B>(), B stanowi:",
+      "question": "Korzystając z Automappera, w konstrukcji cfg.CreateMap&lt;A,B&gt;(), B stanowi:",
       "options": ["Typ źródłowy", "Typ docelowy", "ViewModel", "DataModel"],
       "correctAnswer": 1,
       "type": "single"
@@ -799,7 +799,7 @@
     },
     {
       "id": 88,
-      "question": "Co się wydarzy po wykonaniu instrukcji `Mapper.Map<PostVm>(post)`, zakładając, że nie została zdefiniowana mapa dla typu Post do typu PostVm?",
+      "question": "Co się wydarzy po wykonaniu instrukcji `Mapper.Map&lt;PostVm&gt;(post)`, zakładając, że nie została zdefiniowana mapa dla typu Post do typu PostVm?",
       "options": [
         "Podmieni typ PostVm na jego typ bazowy.",
         "Zostanie zgłoszony wyjątek o braku mapy.",
@@ -811,7 +811,7 @@
     },
     {
       "id": 89,
-      "question": "Do czego służy fragment kodu `services.AddScoped<IUnitOfWork, UnitOfWork>()`?",
+      "question": "Do czego służy fragment kodu `services.AddScoped&lt;IUnitOfWork, UnitOfWork&gt;()`?",
       "options": [
         "powiązania interfejsu z klasą w kontenerze DI, gdzie obiekt będzie tworzony za każdym żądaniem.",
         "mapowania serwisu na interfejs.",
@@ -860,7 +860,7 @@
     },
     {
       "id": 94,
-      "question": "Do czego służy generyczny parametr (int) w kodzie: `public class Role : IdentityRole<int>`?",
+      "question": "Do czego służy generyczny parametr (int) w kodzie: `public class Role : IdentityRole&lt;int&gt;`?",
       "options": [
         "Definiuje klucz obcy",
         "Ustanawia typ klasy bazowej dla klasy Roles",
