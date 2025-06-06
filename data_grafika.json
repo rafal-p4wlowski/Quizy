@@ -251,7 +251,7 @@
         "Umożliwia tworzenie przejść oraz animacji przy pomocy CSS",
         "Wprowadza Canvas, co umożliwia tworzenie złożonej grafiki 2D oraz 3D bezpośrednio w przeglądarce"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "type": "single"
     },
     {
@@ -268,7 +268,7 @@
     },
     {
       "id": 23,
-      "question": "Wskaż jednostkę niezależną SVG:",
+      "question": "Wskaż domyślną jednostkę SVG:",
       "options": [
         "piksele",
         "w jednostkach niezależnych",
@@ -311,10 +311,7 @@
         "Rysowanie w momencie wywołania funkcji Draw() na koniec definiowania wszystkich prymitywów graficznych",
         "Rysowanie w momencie wywołania funkcji fill()"
       ],
-      "correctAnswer": [
-        0,
-        3
-      ],
+      "correctAnswer": [0, 3],
       "type": "multiple"
     },
     {
@@ -326,7 +323,7 @@
         "setTimeout(function, delay)",
         "setInterval(function, delay)"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "type": "single"
     },
     {

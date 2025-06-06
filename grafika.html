@@ -547,9 +547,15 @@
 
                 if (question.type === 'multiple') {
                     // For multiple choice, update all correct answer indices
-                    // Handle both correctAnswers array or correctAnswer as single value
-                    const correctAnswersArray = question.correctAnswers || 
-                        (question.correctAnswer !== undefined ? [question.correctAnswer] : []);
+                    // Handle both correctAnswers array or correctAnswer as single value or array
+                    let correctAnswersArray;
+                    if (Array.isArray(question.correctAnswers)) {
+                        correctAnswersArray = question.correctAnswers;
+                    } else if (Array.isArray(question.correctAnswer)) {
+                        correctAnswersArray = question.correctAnswer;
+                    } else {
+                        correctAnswersArray = question.correctAnswer !== undefined ? [question.correctAnswer] : [];
+                    }
                     
                     const newCorrectAnswers = correctAnswersArray.map(originalIndex => {
                         return shuffledOptions.findIndex(option => option.originalIndex === originalIndex);
@@ -761,8 +767,13 @@
                         selectedOptions.push(parseInt(input.value));
                     });
 
+                    // Get the correct answers array (handle both correctAnswers and correctAnswer properties)
+                    const correctAnswersArray = question.correctAnswers || 
+                                      (Array.isArray(question.correctAnswer) ? question.correctAnswer : 
+                                       question.correctAnswer !== undefined ? [question.correctAnswer] : []);
+            
                     // Check if all correct answers are selected and no incorrect ones
-                    const correctSet = new Set(question.correctAnswers);
+                    const correctSet = new Set(correctAnswersArray);
                     const selectedSet = new Set(selectedOptions);
                     
                     const isCompletelyCorrect = 
@@ -778,12 +789,12 @@
                         const input = option.querySelector('input');
                         input.disabled = true;
 
-                        if (question.correctAnswers.includes(index)) {
+                        if (correctAnswersArray.includes(index)) {
                             option.classList.add('correct-answer');
                         }
 
                         if (selectedOptions.includes(index)) {
-                            if (question.correctAnswers.includes(index)) {
+                            if (correctAnswersArray.includes(index)) {
                                 option.classList.add('correct');
                             } else {
                                 option.classList.add('incorrect');
