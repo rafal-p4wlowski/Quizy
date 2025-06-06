@@ -48,6 +48,49 @@
             color: white;
         }
 
+        .file-selector {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 64, 64, 0.1);
+            border-radius: 10px;
+            border: 1px solid #FF4040;
+        }
+
+        .file-selector h3 {
+            color: #FF4040;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .file-options {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .file-option {
+            background: #4A4A4A;
+            border: 2px solid #5A5A5A;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #F0F0F0;
+            font-size: 0.9em;
+        }
+
+        .file-option:hover {
+            border-color: #FF4040;
+            background: #5A5A5A;
+        }
+
+        .file-option.active {
+            border-color: #FF4040;
+            background: #FF4040;
+            color: white;
+        }
+
         .shuffle-info {
             font-size: 0.9em;
             opacity: 0.8;
@@ -57,6 +100,16 @@
             border-radius: 20px;
             display: inline-block;
             color: white;
+        }
+
+        .current-file-info {
+            background: rgba(40, 167, 69, 0.2);
+            color: #4CAF50;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-top: 10px;
+            display: inline-block;
         }
 
         .error-info {
@@ -350,6 +403,16 @@
             .question-container {
                 padding: 20px;
             }
+
+            .file-options {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .file-option {
+                width: 80%;
+                text-align: center;
+            }
         }
 
         /* Selection styling for dark theme */
@@ -368,6 +431,22 @@
     <div class="container">
         <div class="header">
             <h1>Quiz Interaktywna grafika i prezentacja danych</h1>
+            
+            <!-- File Selector -->
+            <div class="file-selector">
+                <h3>📁 Wybierz zestaw pytań:</h3>
+                <div class="file-options">
+                    <div class="file-option active" data-file="data_grafika.json">
+                        📝 Pewniaczki
+                    </div>
+                    <div class="file-option" data-file="data_grafika_v2.json">
+                        🚀 Dla chętnych
+                    </div>
+                </div>
+            </div>
+
+            <div class="shuffle-info">🔀 Pytania i odpowiedzi zostały wylosowane</div>
+            <div class="current-file-info" id="currentFileInfo">📂 Aktualny plik: data_awww.json</div>
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill"></div>
             </div>
@@ -394,161 +473,44 @@
         let quizData = null;
         let shuffledQuestions = [];
         let isChecked = false;
+        let currentDataFile = 'data_awww.json';
 
         // Fallback data embedded in HTML (in case JSON file is not accessible)
         const fallbackQuizData = {
-            "title": "Quiz z .NET Framework i ASP.NET MVC",
+            "title": "Quiz z Aplikacji WWW",
             "questions": [
                 {
                     "id": 1,
-                    "question": "Do frameworków narzędziowych zalicza się:",
-                    "options": ["Entity Framework", "MVC Framework", "Razor Pages", "Blazor"],
+                    "question": "Który protokół jest podstawą dla sieci WWW?",
+                    "options": ["FTP", "HTTP", "SMTP", "TCP"],
                     "correctAnswer": 1,
                     "type": "single"
                 },
                 {
                     "id": 2,
-                    "question": "Mechanizm udostępniania kodu, który definiuje sposób tworzenia, hostowania i obsługi pakietów dla platformy .NET to:",
-                    "options": ["Auto Mapper", "Entity Framework", "NuGet", "xUnit"],
-                    "correctAnswer": 2,
+                    "question": "Co oznacza skrót HTML?",
+                    "options": ["HyperText Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "HyperText Modern Language"],
+                    "correctAnswer": 0,
                     "type": "single"
                 },
                 {
                     "id": 3,
-                    "question": "Wskaż nie poprawne dokończenie zdania. \"W relacyjnych bazach danych (...)\"",
-                    "options": ["każdy rekord powinien mieć swój unikalny identyfikator", "w celu powiązania rekordów różnych tabel stosuje się klucze obce", "każda tabela składa się z wierszy lub kolumn", "występują tabele pomiędzy którymi zachodzą relacje"],
-                    "correctAnswer": 2,
-                    "type": "single"
+                    "question": "Które z wymienionych są językami programowania po stronie serwera?",
+                    "options": ["PHP", "JavaScript", "Python", "Ruby", "HTML", "CSS"],
+                    "correctAnswers": [0, 2, 3],
+                    "type": "multiple"
                 },
                 {
                     "id": 4,
-                    "question": "W podejściu EF Code First nazwa pola klucza głównego klasy \"Player\" zgodna z konwencją nie może mieć nazwy:",
-                    "options": ["Id", "IdPlayer", "PlayerId", "Brak poprawnej odpowiedzi"],
+                    "question": "Który kod odpowiedzi HTTP oznacza 'Nie znaleziono'?",
+                    "options": ["200", "404", "500", "301"],
                     "correctAnswer": 1,
                     "type": "single"
                 },
                 {
                     "id": 5,
-                    "question": "Technika ładowania danych powiązanych w jednym zapytaniu to:",
-                    "options": ["Eager loading", "Lazy loading", "Explicit loading", "Full loading"],
-                    "correctAnswer": 0,
-                    "type": "single"
-                },
-                {
-                    "id": 6,
-                    "question": "Jaka funkcja Fluent API odpowiada za ustawienie dokładności zmiennej typu decimal?",
-                    "options": ["MaxLength", "Length", "Precision", "HasPrecision"],
-                    "correctAnswer": 3,
-                    "type": "single"
-                },
-                {
-                    "id": 7,
-                    "question": "W dziedziczeniu w myśl podejścia TPH:",
-                    "options": ["Kolumna \"Discriminator\" tworzona jest zawsze jawnie", "Każdy typ jest reprezentowany w osobnej tabeli", "Reprezentacja danych w bazie jest taka sama jak w podejściu TPT", "Brak poprawnej odpowiedzi"],
-                    "correctAnswer": 3,
-                    "type": "single"
-                },
-                {
-                    "id": 8,
-                    "question": "W relacji wymaganej, dla \"Delete behaviour\" o wartości \"Cascade\", usunięciu instancji typu rodzica powoduje:",
-                    "options": ["Zawsze usunięciu instancji dziecka", "Usunięciu instancji dziecka, gdy nie została ona załadowana do instancji rodzica", "Usunięciu instancji dziecka, gdy została ona załadowana do instancji rodzica", "Zwrócenie błędu"],
-                    "correctAnswer": 2,
-                    "type": "single"
-                },
-                {
-                    "id": 9,
-                    "question": "Proszę wskazać nieprawdziwe zdanie:",
-                    "options": ["Na poziomie interfejsu użytkownika kontroler jest abstrakcją", "Kontroler służy do definiowania i grupowania zestawu akcji", "Akcja kontrolera może pobierać pewne dane modelu", "Prywatne metody kontrolera są akcjami"],
-                    "correctAnswer": 3,
-                    "type": "single"
-                },
-                {
-                    "id": 10,
-                    "question": "Metoda Ok() wywołana w kontrolerze zwróci kod statusu:",
-                    "options": ["200", "400", "404", "500"],
-                    "correctAnswer": 0,
-                    "type": "single"
-                },
-                {
-                    "id": 11,
-                    "question": "Do czego służy ViewDiscovery?",
-                    "options": ["Do odnajdowania widoków", "Do zarządzania danymi", "Do obsługi routingu", "Do walidacji formularzy"],
-                    "correctAnswer": 0,
-                    "type": "single"
-                },
-                {
-                    "id": 12,
-                    "question": "Jakie jest jawne wywołanie Razor?",
-                    "options": ["@obj.id", "@(obj.pole)", "@{obj.pole}", "obj.pole"],
-                    "correctAnswer": 1,
-                    "type": "single"
-                },
-                {
-                    "id": 13,
-                    "question": "Co zawiera widok?",
-                    "options": [
-                        "Razor Syntax",
-                        "Częściowe Widoki (Partial Views)",
-                        "Kompilator Javy",
-                        "Baza danych wbudowana w widok",
-                        "Formularze i Elementy Interaktywne",
-                        "HTML Markup",
-                        "Dane Przekazywane z Kontrolera",
-                        "Layout Views",
-                        "Elementy C# i Razor",
-                        "Bezpośredni dostęp do BIOS",
-                        "Skrypty JavaScript i Style CSS",
-                        "Dyrektywy Razor"
-                    ],
-                    "correctAnswers": [0, 1, 4, 5, 6, 7, 8, 10, 11],
-                    "type": "multiple"
-                },
-                {
-                    "id": 14,
-                    "question": "Jak ustawić automappera, żeby nie mappował zmiennej?",
-                    "options": [".Skip()", ".Ignore()", ".Exclude()", ".Remove()"],
-                    "correctAnswer": 1,
-                    "type": "single"
-                },
-                {
-                    "id": 15,
-                    "question": "Funkcja mappera cfg.CreateMap<A,B>(). Jakim typem jest A?",
-                    "options": ["Typem docelowym", "Typem źródłowym", "Typem bazowym", "Typem generycznym"],
-                    "correctAnswer": 1,
-                    "type": "single"
-                },
-                {
-                    "id": 16,
-                    "question": "Jaka dyrektywa pozwala na wyrenderowanie różnych zawartości w różnych częściach strony HTML?",
-                    "options": ["@model", "@using", "@section", "@layout"],
-                    "correctAnswer": 2,
-                    "type": "single"
-                },
-                {
-                    "id": 17,
-                    "question": "W jakim pliku kod wywołuje się przed widokiem i jest używany w każdym widoku?",
-                    "options": ["_Layout.cshtml", "_ViewStart.cshtml", "_ViewImports.cshtml", "_ViewEnd.cshtml"],
-                    "correctAnswer": 1,
-                    "type": "single"
-                },
-                {
-                    "id": 18,
-                    "question": "Jakie muszą być funkcje w kontrolerach?",
-                    "options": ["Prywatne", "Publiczne", "Statyczne", "Wirtualne"],
-                    "correctAnswer": 1,
-                    "type": "single"
-                },
-                {
-                    "id": 19,
-                    "question": "Nieprawidłowe stwierdzenia odnośnie SOA:",
-                    "options": ["Usługi są niezależne", "Usługi są między sobą zależne", "Usługi są wielokrotnego użytku", "Usługi mają dobrze zdefiniowane interfejsy"],
-                    "correctAnswer": 1,
-                    "type": "single"
-                },
-                {
-                    "id": 20,
-                    "question": "Co zawiesza wykonanie metody asynchronicznej?",
-                    "options": ["operator async", "operator await", "operator yield", "operator return"],
+                    "question": "Co to jest REST?",
+                    "options": ["Protokół sieciowy", "Architektura aplikacji webowych", "Język programowania", "Baza danych"],
                     "correctAnswer": 1,
                     "type": "single"
                 }
@@ -619,9 +581,10 @@
                 <div class="error-info">
                     <h3>⚠️ Błąd podczas ładowania quizu</h3>
                     <p><strong>Szczegóły błędu:</strong> ${error.message}</p>
+                    <p><strong>Próbowany plik:</strong> <code>${currentDataFile}</code></p>
                     <p><strong>Możliwe przyczyny i rozwiązania:</strong></p>
                     <ul>
-                        <li>Plik <code>data_grafika.json</code> nie znajduje się w tym samym folderze co <code>index.html</code></li>
+                        <li>Plik <code>${currentDataFile}</code> nie znajduje się w tym samym folderze co <code>awww.html</code></li>
                         <li>Otwierasz plik HTML bezpośrednio (protocol file://) - spróbuj użyć lokalnego serwera</li>
                         <li>Przeglądarka blokuje wczytywanie plików lokalnych z powodów bezpieczeństwa</li>
                         <li>Plik JSON ma nieprawidłową składnię</li>
@@ -648,28 +611,58 @@
             displayQuiz();
             document.getElementById('useFallbackData').style.display = 'none';
             
-            // Update shuffle info
-            const shuffleInfo = document.querySelector('.shuffle-info');
-            shuffleInfo.textContent = '🔀 Używam wbudowanych pytań (losowanie aktywne)';
-            shuffleInfo.style.background = 'rgba(40, 167, 69, 0.3)';
+            // Update file info
+            document.getElementById('currentFileInfo').textContent = '📂 Używam: wbudowane pytania zapasowe';
+            document.getElementById('currentFileInfo').style.background = 'rgba(40, 167, 69, 0.3)';
         }
 
-        // Load quiz data
-        async function loadQuizData() {
+        // Load quiz data from selected file
+        async function loadQuizData(filename = currentDataFile) {
             try {
-                const response = await fetch('data_grafika.json');
+                const response = await fetch(filename);
                 
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
                 
                 quizData = await response.json();
+                currentDataFile = filename;
                 shuffleQuizData();
                 displayQuiz();
+                
+                // Update file info
+                document.getElementById('currentFileInfo').textContent = `📂 Aktualny plik: ${filename}`;
+                document.getElementById('currentFileInfo').style.background = 'rgba(40, 167, 69, 0.2)';
+                
+                // Hide fallback button if it was shown
+                document.getElementById('useFallbackData').style.display = 'none';
+                
             } catch (error) {
                 console.error('Błąd podczas ładowania danych quizu:', error);
                 showErrorMessage(error);
             }
+        }
+
+        // Handle file selection
+        function setupFileSelector() {
+            const fileOptions = document.querySelectorAll('.file-option');
+            
+            fileOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    if (isChecked) {
+                        alert('Aby zmienić plik, najpierw zresetuj quiz!');
+                        return;
+                    }
+                    
+                    // Update active state
+                    fileOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Load new file
+                    const filename = this.dataset.file;
+                    loadQuizData(filename);
+                });
+            });
         }
 
         // Display quiz questions
@@ -841,7 +834,7 @@
                 <p>Poprawne odpowiedzi: ${correctAnswers} z ${totalQuestions}</p>
                 <p>Wynik: ${percentage}%</p>
                 <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">
-                    Odśwież stronę lub kliknij "Wylosuj ponownie" aby otrzymać nowy zestaw pytań
+                    Plik: ${currentDataFile} | Odśwież stronę lub kliknij "Wylosuj ponownie" aby otrzymać nowy zestaw pytań
                 </p>
             `;
             resultsDiv.style.display = 'block';
@@ -891,8 +884,11 @@
         document.getElementById('shuffleQuiz').addEventListener('click', shuffleQuizAgain);
         document.getElementById('useFallbackData').addEventListener('click', useFallbackData);
 
-        // Load quiz when page loads
-        window.addEventListener('load', loadQuizData);
+        // Initialize app
+        window.addEventListener('load', function() {
+            setupFileSelector();
+            loadQuizData();
+        });
 
         // Add CSS animation for shuffle notification
         const style = document.createElement('style');
