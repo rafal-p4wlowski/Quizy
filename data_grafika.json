@@ -6,8 +6,8 @@
       "question": "Która z funkcji rysujących na Canvas potrafi wpisać wycinek okręgu pomiędzy dwie proste ułożone pod dowolnym kątem:",
       "options": [
         "context.moveTo(x0,y0);context.arcTo(x1, y1, x2, y2, promien);",
-        "context.moveTo(x0,y0);context.bezierCurveTo(x1, y1, x2, y2, promien);",
-        "context.arc(x, y, x1, x2, y2, promien)",
+        "context.moveTo(x0,y0);context.arc(x1, y1, x2, y2, promien);",
+        "context.arcTo(x, y, x1, x2, y2, promien)",
         "context.arc(x1, y1, x2, y2, promien)"
       ],
       "correctAnswer": 0,
@@ -43,7 +43,7 @@
       "question": "W celu narysowania przebiegu dowolnej funkcji (np. funkcja kwadratowa, funkcja sinus) na Canvas należy:",
       "options": [
         "Wykorzystać złożeniu wielu krzywych Beziera odtwarzających przebieg oryginalnej funkcji",
-        "Krokować dziedzinę tejże funkcji z odpowiednio małym krokiem, następnie należy narysować wykres funkcji złożonych z wystarczająco małych odcinków",
+        "Dokonać dyskretyzacji funkcji z odpowiednio małym krokiem, następnie należy narysować wykres funkcji złożonych z wystarczająco małych odcinków",
         "Wykorzystać złożenie wielu krzywych kwadratowych o odpowiednich współczynnikach odtwarzających wykres oryginalnej funkcji",
         "Należy wykorzystać zaawansowane narzędzie do odtwarzania wykresu funkcji."
       ],
@@ -67,11 +67,11 @@
       "question": "W jaki sposób odwołać się do obiektu zdefiniowanego wcześniej w celu jego wyświetlenia w formacie SVG.",
       "options": [
         "<use href=\"#group1\" ... />",
-        "<use xlink:href=\"#group1\" ... />",
+        "<use xlink:href=\".group1\" ... />",
         "<image xlink:href=\"#group1\" ... />",
         "<use xhref=\"#group1\" ... />"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "type": "single"
     },
     {
@@ -116,7 +116,7 @@
       "question": "W celu przeprowadzenia skalowania układu współrzędnych zgodnie ze współczynnikami (sx,sy) względem wybranego punktu (x1,y1) (np. środek jakiegoś rysowanego obiektu), należy wykonać następujące instrukcje (Bieżące położenie układu współrzędnych to (0,0) ):",
       "options": [
         "context.translate(x1,y1); context.scale(sx,sy);",
-        "context.translate(x1,y1); context.resize(sx,sy);",
+        "ccontext.translate(x1,y1); context.resize(sx,sy);",
         "context.scale(sx,sy); context.translate(x1,y1);",
         "context.scale(sx,sy);"
       ],
@@ -140,11 +140,11 @@
       "question": "W celu zdefiniowania przejścia css polegającego na powiększeniu i zmianie koloru tła na niebieski wykonywanego przez 0.5 sekundy dla elementów o nazwie klasy \".anim1\" wykonywanej po najechaniu kursorem myszy należy zdefiniować klasę css w następujący sposób:",
       "options": [
         ".anim1 { transform: scale(1.2, 1.2); background-color: blue; } .anim1: hover { transition: 0.5s all; }",
-        ".anim1: hover { transform: scale(1.2, 1.2); background-color: blue; } .anim1 { transition: 0.5s all; }",
-        ".anim1: hover { transform: scale(1.2, 1.2); background-color: blue; } .anim1 { transition: 0.5s all; }",
-        ".anim1: hover { transform: scale(1.2, 1.2); background-color: blue; } .anim1 { transition: 0.5s all; }"
+        ".anim1:hover { transform: scale(1.2, 1.2); background-color: blue; } .anim1 { transformation: 0.5s all; }",
+        ".anim1:hover { transform: resize(1.2, 1.2); background-color: blue; } .anim1 { transition: 0.5s all; }",
+        ".anim1:hover { transform: scale(1.2, 1.2); background-color: blue; } .anim1 { transition: 0.5s all; }"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "type": "single"
     },
     {
@@ -164,7 +164,8 @@
       "question": "Podczas rysowania wskazówek zegara, ich położenie na tarczy (wskazanie określonej godziny/minuty/sekundy) jest określone poprzez:",
       "options": [
         "Wywołanie funkcji transformacji układu współrzędnych",
-        "Wykonanie obliczeń matematycznych (użycie funkcji sin oraz cos)"
+        "Wykonanie obliczeń matematycznych (użycie funkcji sin oraz cos)",
+        "Żadne z powyższych"
       ],
       "correctAnswer": 0,
       "type": "single"
@@ -173,10 +174,10 @@
       "id": 15,
       "question": "Wskaż poprawny znacznik SVG dla okręgu",
       "options": [
-        "<circle ...>",
-        "<oval ...>",
-        "<arc ...>",
-        "<round ...>"
+        "cx",
+        "x",
+        "y",
+        "c"
       ],
       "correctAnswer": 0,
       "type": "single"
@@ -185,12 +186,12 @@
       "id": 16,
       "question": "Kryterium dostępności WCAG 2.1 określa",
       "options": [
-        "Jakie warunki muszą być spełnione dla osób z zaburzeniami ostrości widzenia",
-        "Warunki jakie muszą być spełnione dla osób z zaburzeniami widzenia barw",
+        "Wymaganie jakie muszą być spełnione dla osób z zaburzeniami ostrości widzenia",
+        "Wymaganie jakie muszą być spełnione dla osób z zaburzeniami widzenia barw",
         "Żadne z wymienionych",
-        "Warunki jakie muszą być spełnione dla osób z astygmatyzmem"
+        "Wymaganie jakie muszą być spełnione dla osób z astygmatyzmem"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "type": "single"
     },
     {
@@ -207,12 +208,12 @@
     },
     {
       "id": 18,
-      "question": "Przy użyciu której funkcji można wykonać odbicie lustrzane obiektu względem osi bez użycia bibliotek na Canvas",
+      "question": "Przy użyciu której funkcji można wykonać odbicie lustrzane układu współrzędnych bez użycia bibliotek na Canvas",
       "options": [
-        "translate(x,-y)",
+        "translate(-x, y)",
         "scale(x, -y)",
-        "reflect(x,y)",
-        "rotate(pi)"
+        "reflect(-x, y)",
+        "rotate(PI)"
       ],
       "correctAnswer": 1,
       "type": "single"
@@ -231,12 +232,12 @@
     },
     {
       "id": 20,
-      "question": "Rysowanie wycinka okręgu o promieniu r wpisanego pomiędzy 2 proste przecinające się opisane współrzędnymi: prosta p1: (x0, y0), (x1, y1), prosta p2: (x0,y0), (x2,y2) realizuje się przy pomocy funkcji/pary funkcji:",
+      "question": "Rysowanie wycinka okręgu o promieniu r wpisanego pomiędzy 2 proste przecinające się opisane współrzędnymi: prosta p1: (x0, y0), (x1, y1), prosta p2: (x1,y1), (x2,y2) realizuje się przy pomocy funkcji/pary funkcji:",
       "options": [
-        "curveTo(x0, y0, arcTo(x1, y1, x2, y2, r));",
-        "moveTo(x1, y1); arcTo(x0, y0, x2, y2, r);",
-        "moveTo(x0, y0); arc(x1, y1, x2, y2, r);",
-        "moveTo(x0, y0); arcTo(x1, y1, x2, y2, r);"
+        "cursorTo(x0, y0);arcTo(x1, y1, x2, y2, r);",
+        "moveTo(x1, y1);arcTo(x0, y10, x2, y2, r);",
+        "lineTo(x0, y0);arcTo(x1, y1, x2, y2, r);",
+        "moveTo(x0, y0);arcTo(x1, y1, x2, y2, r);"
       ],
       "correctAnswer": 3,
       "type": "single"
@@ -245,12 +246,12 @@
       "id": 21,
       "question": "HTML 5 oraz CSS",
       "options": [
-        "Umożliwia dynamiczne tworzenie elementów drzewa DOM po stronie użytkownika (w przeglądarce) w Internecie",
+        "Umożliwia dynamiczne tworzenie elementów drzewa DOM po stronie użytkownika wyposażonego w interakcję",
         "Zapewnia ładowanie małej ilości kodu JavaScript po stronie klienta",
-        "Umożliwia tworzenie grafiki oraz animacji przy pomocy CSS",
-        "Umożliwia na Canvas tworzenie złożonej grafiki 2D oraz 3D bezpośrednio w przeglądarce"
+        "Umożliwia tworzenie przejść oraz animacji przy pomocy CSS",
+        "Wprowadza Canvas, co umożliwia tworzenie złożonej grafiki 2D oraz 3D bezpośrednio w przeglądarce"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "type": "single"
     },
     {
@@ -279,11 +280,11 @@
     },
     {
       "id": 24,
-      "question": "Obrys oraz wypełnienie dla figury prostokąt na Canvas jest rysowane przy pomocy",
+      "question": "Obrys oraz wypełnienie dla figury prostokąt przy rysowaniu na Canvas jest tworzone:",
       "options": [
         "Żadne z powyższych",
-        "Prostokąt na Canvas jest obiektem JavaScript, obrys jest metodą a wypełnienie inną metodą",
-        "Niezależnie, obrys oraz wypełnienie mogą być narysowane w momencie jednego wywołania",
+        "Prostokąt na Canvas jest obiektem JavaScript, obrys jest związany bezpośrednio z wypełnieniem figury",
+        "Niezależnie, obrys oraz wypełnienie mogą być narysowane w zupełnie różnych miejscach",
         "Jest to figura, obrys jest zawiązany bezpośrednio z wypełnieniem figury, ich pozycja nie można zmieniać"
       ],
       "correctAnswer": 2,
@@ -293,25 +294,28 @@
       "id": 25,
       "question": "Wskaż znacznik grupujący w SVG to:",
       "options": [
-        "<g>",
-        "<group>",
-        "<svg>",
-        "<div>"
+        "id",
+        "group",
+        "g",
+        "grp"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "type": "single"
     },
     {
       "id": 26,
-      "question": "Przy rysowaniu na Canvas prymitywów graficznych, obrys oraz wypełnienie (kolorem) tego prymitywu jest/są realizowane:",
+      "question": "Przy rysowaniu na Canvas prymitywów graficznych, obrys oraz wypełnienie obiektów jest (wybierz wszystkie właściwe):",
       "options": [
         "Rysowanie w momencie wywołania funkcji stroke()",
         "Rysowanie w momencie wywołania funkcji definiującej prymityw graficzny",
         "Rysowanie w momencie wywołania funkcji Draw() na koniec definiowania wszystkich prymitywów graficznych",
         "Rysowanie w momencie wywołania funkcji fill()"
       ],
-      "correctAnswer": 1,
-      "type": "single"
+      "correctAnswer": [
+        0,
+        3
+      ],
+      "type": "multiple"
     },
     {
       "id": 27,
@@ -329,7 +333,7 @@
       "id": 28,
       "question": "Funkcje animacji CSS są to",
       "options": [
-        "są to funkcje opisujące sposób realizacji animacji między klatkami kluczowymi - używane są w CSS a definiujemy je w JavaScript.",
+        "są to funkcje opisujące sposób realizacji animacji między klatkami kluczowymi - używamy ich w CSS a definiujemy je w JavaScript.",
         "są to funkcje które możemy zdefiniować w CSS przy użyciu JavaScript",
         "zdefiniowane przez użytkownika w języku JavaScript sposoby animacji elementów HTML",
         "są to funkcje opisujące sposób realizacji animacji między klatkami kluczowymi - deklarujemy ich użycie w CSS"
