@@ -66,10 +66,10 @@
       "id": 6,
       "question": "W jaki sposób odwołać się do obiektu zdefiniowanego wcześniej w celu jego wyświetlenia w formacie SVG.",
       "options": [
-        "<use href=\"#group1\" ... />",
-        "<use xlink:href=\".group1\" ... />",
-        "<image xlink:href=\"#group1\" ... />",
-        "<use xhref=\"#group1\" ... />"
+        "&lt;use href=\"#group1\" ... /&gt;",
+        "&lt;use xlink:href=\".group1\" ... /&gt;",
+        "&lt;image xlink:href=\"#group1\" ... /&gt;",
+        "&lt;use xhref=\"#group1\" ... /&gt;"
       ],
       "correctAnswer": 0,
       "type": "single"
