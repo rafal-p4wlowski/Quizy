@@ -621,7 +621,7 @@
                     <p><strong>Szczegóły błędu:</strong> ${error.message}</p>
                     <p><strong>Możliwe przyczyny i rozwiązania:</strong></p>
                     <ul>
-                        <li>Plik <code>data_grafika.json</code> nie znajduje się w tym samym folderze co <code>index.html</code></li>
+                        <li>Plik <code>data_roboty.json</code> nie znajduje się w tym samym folderze co <code>index.html</code></li>
                         <li>Otwierasz plik HTML bezpośrednio (protocol file://) - spróbuj użyć lokalnego serwera</li>
                         <li>Przeglądarka blokuje wczytywanie plików lokalnych z powodów bezpieczeństwa</li>
                         <li>Plik JSON ma nieprawidłową składnię</li>
@@ -657,8 +657,8 @@
         // Load quiz data
         async function loadQuizData() {
             try {
-                const response = await fetch('data_grafika.json');
-                
+                const response = await fetch('data_roboty.json');
+
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
