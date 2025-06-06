@@ -547,7 +547,11 @@
 
                 if (question.type === 'multiple') {
                     // For multiple choice, update all correct answer indices
-                    const newCorrectAnswers = question.correctAnswers.map(originalIndex => {
+                    // Handle both correctAnswers array or correctAnswer as single value
+                    const correctAnswersArray = question.correctAnswers || 
+                        (question.correctAnswer !== undefined ? [question.correctAnswer] : []);
+                    
+                    const newCorrectAnswers = correctAnswersArray.map(originalIndex => {
                         return shuffledOptions.findIndex(option => option.originalIndex === originalIndex);
                     });
 
