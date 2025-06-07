@@ -9,8 +9,8 @@
         "dwa koła mają wspólną nieruchomą oś",
         "sprzężony dla wszystkich kół"
       ],
-      "correctAnswers": [0, 1],
-      "type": "multiple"
+      "correctAnswers": [0],
+      "type": "single"
     },
     {
       "id": 2,
