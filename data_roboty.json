@@ -147,7 +147,7 @@
       "id": 16,
       "question": "Pomiar odległości od 3 lub więcej obiektów dotyczy:",
       "options": ["nawigacji trójkierunkowej", "nawigacji triangulacyjnej"],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "type": "single"
     },
     {
