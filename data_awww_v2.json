@@ -1349,6 +1349,42 @@
       ],
       "correctAnswer": 2,
       "type": "single"
+    },
+    {
+      "id": 137,
+      "question": "Czym jest autoryzacja warunkowa?",
+      "options": [
+        "Autoryzacja oparta na czasie",
+        "Autoryzacja oparta na rolach",
+        "Autoryzacja oparta na określonych warunkach lub stanie użytkownika",
+        "Autoryzacja oparta na szyfrowaniu"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 138,
+      "question": "Które z poniższych stwierdzeń dotyczących sesji jest fałszywe?",
+      "options": [
+        "Sesja to grupa interakcji użytkownika na stronie w danym czasie.",
+        "Sesja jest powiązana tylko z okresem pomiędzy logowaniem a wylogowaniem.",
+        "Sesje mogą istnieć na żądanie serwera bez świadomości użytkownika.",
+        "Sesje często wiążą się z przechowywaniem danych w ciągu ich trwania."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 139,
+      "question": "Jaką metodę użyjesz w ASP.NET Core, aby dodać autoryzację do kontrolera?",
+      "options": [
+        "[HttpGet]",
+        "[HttpPost]",
+        "[Authorize]",
+        "[ValidateAntiForgeryToken]"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
     }
   ]
 }
