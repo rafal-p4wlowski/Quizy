@@ -1097,6 +1097,222 @@
       ],
       "correctAnswer": 3,
       "type": "single"
-    }
+    },
+    {
+      "id": 116,
+      "question": "Która metoda w kontrolerze ASP.NET MVC zwraca przekierowanie na inną stronę?",
+      "options": [
+        "RedirectToAction()",
+        "Content()",
+        "Json()",
+        "View()"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 117,
+      "question": "Co oznacza skrót MVC w kontekście wzorca projektowego?",
+      "options": [
+        "Model-View-Control",
+        "Manage-View-Control",
+        "Model-View-Controller",
+        "Manage-View-Controller"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 118,
+      "question": "W której części projektu ASP.NET MVC znajdują się pliki statyczne, takie jak skrypty JavaScript i pliki CSS?",
+      "options": [
+        "Controllers",
+        "Views",
+        "Models",
+        "wwwroot"
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 119,
+      "question": "Która warstwa w aplikacji wielowarstwowej odpowiada za interfejs użytkownika?",
+      "options": [
+        "Integration Gateway",
+        "User Interface",
+        "Commons",
+        "Security Management"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 120,
+      "question": "Które z poniższych stwierdzeń dotyczących ASP.NET MVC jest prawdziwe?",
+      "options": [
+        "Kontrolery ASP.NET MVC muszą dziedziczyć po klasie Model.",
+        "Widoki ASP.NET MVC generują HTML.",
+        "Modele ASP.NET MVC obsługują logikę aplikacji.",
+        "Kontrolery ASP.NET MVC są odpowiedzialne za zarządzanie plikami statycznymi."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 121,
+      "question": "Która metoda klasy Controller zwraca odpowiedź z kodem statusu HTTP 404?",
+      "options": [
+        "Ok()",
+        "BadRequest()",
+        "NotFound()",
+        "Redirect()"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 122,
+      "question": "Co to jest ORM?",
+      "options": [
+        "Narzędzie do zarządzania zasobami sieciowymi",
+        "Mapowanie obiektowo-relacyjne",
+        "Protokół komunikacyjny dla aplikacji webowych",
+        "System zarządzania bazą danych"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 123,
+      "question": "Jakie podejścia do ORM są dostępne w Entity Framework Core?",
+      "options": [
+        "Model First, View First, Controller First",
+        "Database First, Code First, Model First",
+        "Schema First, Data First, Logic First",
+        "Object First, Relation First, Mapping First"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 124,
+      "question": "Który z poniższych opisuje podejście Code First w ORM?",
+      "options": [
+        "Model danych tworzony jest na podstawie diagramu",
+        "Baza danych jest tworzona na podstawie kodu klas modeli danych",
+        "Klasy modeli są generowane na podstawie istniejącej bazy danych",
+        "Kod migracji jest tworzony na podstawie schematu bazy danych"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 125,
+      "question": "Jakie są typy relacji między modelami w Entity Framework?",
+      "options": [
+        "One to One, One to Many, Many to Many",
+        "Single to Single, Single to Multiple, Multiple to Multiple",
+        "Parent to Child, Child to Parent, Peer to Peer",
+        "Primary to Foreign, Foreign to Primary, Composite to Composite"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 126,
+      "question": "Jakie jest podstawowe zadanie narzędzia 'dotnet-ef'?",
+      "options": [
+        "Zarządzanie sesjami użytkowników",
+        "Tworzenie skryptów migracyjnych i uruchamianie ich na bazie danych",
+        "Obsługa żądań HTTP",
+        "Generowanie raportów"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 127,
+      "question": "Która dyrektywa w modelu danych Entity Framework oznacza klucz obcy?",
+      "options": [
+        "[PrimaryKey]",
+        "[NotNull]",
+        "[ForeignKey]",
+        "[Unique]"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 128,
+      "question": "Czym jest ViewModel w ASP.NET?",
+      "options": [
+        "Model danych związany bezpośrednio z bazą danych",
+        "Model danych używany do przesyłania bardziej złożonych danych między przeglądarką a serwerem",
+        "Widok generowany przez metodę View()",
+        "Narzędzie do zarządzania widokami w aplikacji"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 129,
+      "question": "Które z poniższych stwierdzeń dotyczących ORM jest prawdziwe?",
+      "options": [
+        "ORM nie synchronizuje danych z bazą danych.",
+        "ORM tłumaczy rekordy z bazy danych na obiekty w aplikacji.",
+        "ORM jest używany tylko w aplikacjach webowych.",
+        "ORM nie wspiera migracji bazy danych."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 130,
+      "question": "Które z poniższych stwierdzeń dotyczących ViewModel jest prawdziwe?",
+      "options": [
+        "ViewModel jest bezpośrednio związany z bazą danych.",
+        "ViewModel może łączyć dane z kilku modeli danych.",
+        "ViewModel jest używany tylko w małych projektach.",
+        "ViewModel jest częścią schematu bazy danych."
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 131,
+      "question": "Która metoda w Entity Framework Core jest używana do zapisania zmian w bazie danych?",
+      "options": [
+        "SaveChanges()",
+        "Commit()",
+        "ApplyChanges()",
+        "Submit()"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 132,
+      "question": "Czym jest dependency injection?",
+      "options": [
+        "Techniką szyfrowania danych",
+        "Wzorzec architektury usuwający bezpośrednie zależności między komponentami",
+        "Metodą kompresji danych",
+        "Algorytmem sortowania"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 133,
+      "question": "Jakie są korzyści z dependency injection?",
+      "options": [
+        "Zmniejszenie rozmiaru aplikacji",
+        "Ułatwienie testowania i zarządzania zależnościami",
+        "Zwiększenie złożoności kodu",
+        "Zmniejszenie wydajności"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
   ]
 }
