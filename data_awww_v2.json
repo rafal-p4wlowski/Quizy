@@ -1018,7 +1018,7 @@
         "uwierzytelnienie",
         "identyfikacja"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "type": "single"
     },
     {
@@ -1323,7 +1323,7 @@
         "Rejestruje usługę na poziomie aplikacji",
         "Tworzy obiekt usługi z unikalnym identyfikatorem"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "type": "single"
     },
     {
