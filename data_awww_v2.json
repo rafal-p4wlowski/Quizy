@@ -783,7 +783,7 @@
       "id": 86,
       "question": "Gdzie domyślnie znajduje się reguła routingu aplikacji ASP.NET Core?",
       "options": ["Startup.cs", "Program.cs", "appsettings.json", "bundleconfig.json"],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "type": "single"
     },
     {
@@ -908,6 +908,192 @@
         "rozszerzenie klasy DbContext.",
         "korzystanie z DataAnnotations.",
         "korzystanie z fluent API."
+      ],
+      "correctAnswer": 3,
+      "type": "single"
+    },
+    {
+      "id": 99,
+      "question": "Wskaż stwierdzenie nieprawdziwe?",
+      "options": [
+        "helpery tagowe nie są używane do walidacji danych",
+        "helpery tagowe mogą służyć do buferowania danych",
+        "helpery tagowe mogą służyć do warunkowego wyłączania fragmentów widoków"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 100,
+      "question": "Wskaż typową kolejność działań wykonywanych podczas dodania nowego rekordu do aplikacji interntowej:",
+      "options": [
+        "sprawdzenie modelu, wywołanie bezparametrowej akcji Create, wyświetlenie formularza dowprowadzania danych, bindowanie danych, wprowadzenie danych od bazy danych",
+        "Wywołanie bezparametrowej akcji Create, bidnowanie danych, wyświetlanie formularza do wprowadzenie danych, sprawdzenie modelu, wprowadzenie danych do bazy danych",
+        "Wywołanie bezparametrowej akcji Create, wyświetlenie formularza do wprowadzenia danych, zbudowania danych, sprawdzenie modelu, wprowadzenie danych do bazy danych"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 101,
+      "question": "Proces, w którym zapytania do tabeli nadrzędnej pobiera także dane z tabeli podrzędnej to wczytywanie:",
+      "options": [
+        "jawne",
+        "z opóźnieniem",
+        "zachłanne"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 102,
+      "question": "Zgodnie z konwencją nazewniczą w EF kolumna klucza głównego powinna być w klasie POCO nazwana:",
+      "options": [
+        "Pk",
+        "Id",
+        "Key"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 103,
+      "question": "Wskaż optymalny sposób przechowywania danych sesyjnych dla aplikacji bankowej:",
+      "options": [
+        "OutProc",
+        "InProc"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 104,
+      "question": "Rejestracja w systemie to:",
+      "options": [
+        "identyfikacja",
+        "uwierzytelnianie",
+        "autoryzacja"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 105,
+      "question": "Widoki we wzorcu MVC aplikacji internetowej:",
+      "options": [
+        "pobierają dane bezpośrednio od użytkownika i je prezentują",
+        "pobierają dane bezpośrednio z kontrolera i je wyświetla",
+        "pobierają dane bezpośrednio z modelu i je wyświetlają"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 106,
+      "question": "Migracje w VS są przeznaczone do:",
+      "options": [
+        "realizacja operacji CRUD w ORM",
+        "generowanie struktury bazy danych",
+        "zestawienia połączenia z serwerem baz danych"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 107,
+      "question": "Powiązanie tożsamości elektronicznej z osobą fizyczną to:",
+      "options": [
+        "autoryzacja",
+        "uwierzytelnienie",
+        "identyfikacja"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 108,
+      "question": "Użycie loginu i hasła w systemie to:",
+      "options": [
+        "autoryzacja",
+        "uwierzytelnienie",
+        "identyfikacja"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 109,
+      "question": "Przyznanie dostępu do zasobów w systemie to:",
+      "options": [
+        "autoryzacja",
+        "uwierzytelnienie",
+        "identyfikacja"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 110,
+      "question": "Obiekt kontekstu danych w EF:",
+      "options": [
+        "obsługuje żądania, ale nie powinien być używany do aktualizacji danych",
+        "obsługuje wiele żądań bez konieczności usuwania go z pamięci",
+        "jest usuwany po zakończeniu obsługi żądania"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 111,
+      "question": "Domyślnym zachowaniem mechanizmu usuwania kaskadowego dla rekordów z tabeli podrzędnej w EFC jest:",
+      "options": [
+        "ustawienie FK na null w pamięci i brak oddziaływania na bazę danych",
+        "brak oddziaływania na bazę danych i obiekt z kolekcją danych w pamięci",
+        "ustawienie FK na null zarówno w pamięci, jak i bazie danych"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 112,
+      "question": "FluentAPI w ASP.NET nie jest niezbędne do zapewnienia obsługi relacji między tabelami:",
+      "options": [
+        "fałsz",
+        "prawda"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 113,
+      "question": "Głównym założeniem mechanizmu odwrócenia sterowania jest:",
+      "options": [
+        "uzależnienie klas (modułów) wyższego poziomu od modułów niższego poziom, nie zaś pewnych abstrakcji",
+        "uzależnienie abstrakcji dla klas (modułów) wyższego i niższego poziomu",
+        "uniezależnienie klas (modułów) wyższego poziomu od modułów niższego poziomu"
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    },
+    {
+      "id": 114,
+      "question": "W wielu miejscach aplikacji należy wyświetlać informację o najnowszym komentarzu na forum, zatem powinno się użyć:",
+      "options": [
+        "widoku częściowego",
+        "komponentu widoku",
+        "metody View"
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 115,
+      "question": "Która metoda klasy Controller w ASP.NET MVC zwraca widok HTML?",
+      "options": [
+        "Json()",
+        "Content()",
+        "File()",
+        "View()"
       ],
       "correctAnswer": 3,
       "type": "single"
