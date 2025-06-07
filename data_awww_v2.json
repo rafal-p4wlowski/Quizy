@@ -1314,5 +1314,41 @@
       "correctAnswer": 1,
       "type": "single"
     },
+    {
+      "id": 134,
+      "question": "Jaką funkcję pełni 'ServiceCollectionServiceExtensions.AddTransient'?",
+      "options": [
+        "Tworzy singletonowy obiekt usługi",
+        "Tworzy obiekt usługi żyjący w trakcie zapytania",
+        "Rejestruje usługę na poziomie aplikacji",
+        "Tworzy obiekt usługi z unikalnym identyfikatorem"
+      ],
+      "correctAnswer": 1,
+      "type": "single"
+    },
+    {
+      "id": 135,
+      "question": "Które z poniższych stwierdzeń dotyczących dependency injection jest prawdziwe?",
+      "options": [
+        "Dependency injection zmniejsza zależności między komponentami.",
+        "Dependency injection zwiększa złożoność kodu.",
+        "Dependency injection jest techniką kompresji danych.",
+        "Dependency injection nie jest zalecane w dużych projektach."
+      ],
+      "correctAnswer": 0,
+      "type": "single"
+    },
+    {
+      "id": 136,
+      "question": "Które z poniższych stwierdzeń dotyczących ASP.NET Services jest fałszywe?",
+      "options": [
+        "Usługi zależności są wstrzykiwane w momencie uruchamiania aplikacji.",
+        "Najczęściej wykorzystywaną usługą jest kontekst bazy danych.",
+        "Wstrzyknięte usługi muszą być singletonami.",
+        "Możemy tworzyć własne usługi i rejestrować je w Program.cs."
+      ],
+      "correctAnswer": 2,
+      "type": "single"
+    }
   ]
 }
